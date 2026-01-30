@@ -116,7 +116,7 @@ export function hasAnyFormData(): boolean {
     return false;
   }
 
-  return Object.values(STORAGE_KEYS).some(key => {return Object.values(STORAGE_KEYS).some(key => {
+  return Object.values(STORAGE_KEYS).some(key => {
     const data = localStorage.getItem(key);
     return data !== null && data !== '';
   });

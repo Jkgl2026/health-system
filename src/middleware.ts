@@ -31,7 +31,8 @@ export const config = {
      * - public文件夹
      */
    matcher: [
-  '/((?!_next/static|_next/image|favicon.ico|icons|images|api/health|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|json)$).*)',
-],
+  export const config = {
+  matcher: [
+    '/((?!_next/static|_next/image|favicon.ico|icons|images|api/health|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|json)$).*)',
   ],
 };

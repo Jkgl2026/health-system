@@ -30,6 +30,8 @@ export const config = {
      * - favicon.ico（网站图标）
      * - public文件夹
      */
-    '/((?!_next/static|_next/image|favicon.ico|.*\\.(?:svg|png|jpg|jpeg|gif|webp)$).*)',
+   matcher: [
+  '/((?!_next/static|_next/image|favicon.ico|icons|images|api/health|.*\\.(?:svg|png|jpg|jpeg|gif|webp|ico|json)$).*)',
+],
   ],
 };

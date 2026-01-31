@@ -5,8 +5,6 @@
   "scripts": {
     "build": "bash ./scripts/build.sh",
     "dev": "bash ./scripts/dev.sh",
-    "preinstall": "npx only-allow pnpm",
-    "lint": "eslint",
     "start": "bash ./scripts/start.sh",
     "ts-check": "tsc -p tsconfig.json"
   },
@@ -87,14 +85,5 @@
     "sharp": "^0.34.5",
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
-  },
-  "packageManager": "pnpm@latest",
-  "engines": {
-    "pnpm": ">=8.0.0"
-  },
-  "pnpm": {
-    "overrides": {
-      "esbuild": "^0.25.12"
-    }
   }
 }

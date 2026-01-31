@@ -88,9 +88,9 @@
     "tailwindcss": "^3.4.1",
     "typescript": "^5"
   },
-  "packageManager": "pnpm@9.0.0",
+  "packageManager": "pnpm@latest",
   "engines": {
-    "pnpm": ">=9.0.0"
+    "pnpm": ">=8.0.0"
   },
   "pnpm": {
     "overrides": {

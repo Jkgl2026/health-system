@@ -1,9 +1,8 @@
+import type { NextConfig } from 'next';
 import path from 'path';
-import { fileURLToPath } from 'url';
+import withPWA from 'next-pwa';
 
-const __dirname = path.dirname(fileURLToPath(import.meta.url));
-
-const nextConfig = {
+const nextConfig: NextConfig = {
   images: {
     remotePatterns: [
       {
@@ -13,10 +12,15 @@ const nextConfig = {
       },
     ],
   },
-  webpack: (config) => {
-    config.resolve.alias['@'] = path.resolve(__dirname, 'src');
-    return config;
-  },
 };
 
-export default nextConfig;
+const pwaConfig = withPWA({
+  dest: 'public',
+  register: true,
+  skipWaiting: true,
+  disable: process.env.NODE_ENV === 'development',
+  sw: 'sw.js',
+  scope: '/',
+});
+
+export default pwaConfig(nextConfig);
